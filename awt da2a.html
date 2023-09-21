@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+     header {
+             background: linear-gradient(to right, #FFC0CB, #FFD700, #98FB98, #ADD8E6, #FFA07A);
+            color: #333;;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: black;
+        }
+
+        nav {
+            background-color: #aab199;
+            padding: 0px;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            display: inline;
+            margin: 0 20px;
+        }
+         .nav-box {
+            background: linear-gradient(to right, #4CAF50, #2196F3);
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+       
+        .recipe-container {
+            display: none;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        My Recipe Book
+    </header>
+    <nav>
+       <ul>
+            <li class="nav-box"><a href="#" onclick="showRecipe('bise-bele-bhath')">Bise Bele Bhath</a></li>
+            <li class="nav-box"><a href="#" onclick="showRecipe('tacos')">Tacos</a></li>
+            <li class="nav-box"><a href="#" onclick="showRecipe('butter-chicken')">Butter Chicken</a></li>
+            <li class="nav-box"><a href="#" onclick="showRecipe('sushi')">Sushi</a></li>
+            <li class="nav-box"><a href="#" onclick="showRecipe('creme-brulee')">Creme Brulee</a></li>
+        </ul>
+    </nav>
+    
+    <div id="bise-bele-bhath" class="recipe-container">
+        <h2>Bise Bele Bhath</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqUfWsk1mpjn2Cnz3qNRbrBOMZjMt6DX8SIA&usqp=CAU" alt="Bise Bele Bhath">
+        <h3>Ingredients:</h3>
+      <li>
+            <ol> 1 cup rice</ol>
+            <ol>1/4 cup toor dal </ol>
+            <ol> 1/4 cup chana dal </ol>
+ 	    <ol>1/4 cup mixed vegetables (carrots, peas, beans)</ol>
+	    <ol>1 small onion, chopped</ol>
+	    <ol>2-3 green chilies, slit</ol>
+	    <ol>1/2 teaspoon turmeric powder</ol>
+            <ol>1 teaspoon garam masala</ol>
+	    <ol>1 tablespoon oil</ol>
+	    <ol>Salt to taste</ol>
+	    <ol>Fresh coriander leaves for garnish</ol>
+</li>
+        <h3>Instructions:</h3>
+        <li>
+            <ol>Wash and soak rice and dals together for 30 minutes.</ol>
+            <ol>Heat oil in a pressure cooker and add chopped onions and green chilies. Sauté until onions turn translucent.</ol>
+            <ol>Add mixed vegetables and sauté for a few minutes.</ol>
+            <ol>Add turmeric powder, garam masala, and salt. Mix well.</ol>
+            <ol>Drain the soaked rice and dals and add them to the cooker. Sauté for a couple of minutes.</ol>
+            <ol>Add 4 cups of water and close the pressure cooker. Cook for 3-4 whistles until everything is well-cooked.</ol>
+            <ol>Let the pressure release naturally. Garnish with fresh coriander leaves.</ol>
+            <ol>Your Bise Bele Bhath is ready to serve. Enjoy!</ol>
+        </li>
+    </div>
+
+    <div id="tacos" class="recipe-container">
+        <h2>Tacos</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfSDKQ5WOLjyJqherv_JzXnroofcTtjmGhA&usqp=CAU" alt="Tacos">
+        <h3>Ingredients:</h3>
+        <li>
+            <ol>1 lb ground beef</ol>
+            <ol>1 packet taco seasoning</ol>
+            <ol>8 small taco shells</ol>
+            <ol>1 cup shredded lettuce</ol>
+            <ol>1 cup diced tomatoes</ol>
+            <ol>1/2 cup shredded cheddar cheese</ol>
+            <ol>1/4 cup diced onions</ol>
+            <ol>1/4 cup sour cream</ol>
+            <ol>Salsa and guacamole for serving</ol>
+        </li>
+        <h3>Instructions:</h3>
+        <li>
+            <ol>In a skillet, cook ground beef over medium heat until browned. Drain excess fat.</ol>
+            <ol>Stir in taco seasoning and water (as per packet instructions). Simmer for a few minutes until thickened.</ol>
+            <ol>Warm taco shells in the oven according to package instructions.</ol>
+            <ol>Fill each taco shell with the seasoned beef.</ol>
+            <ol>Top with lettuce, tomatoes, cheese, onions, and sour cream.</ol>
+            <ol>Serve with salsa and guacamole. Enjoy your Tacos!</ol>
+        </li>
+    </div>
+
+    <div id="butter-chicken" class="recipe-container">
+        <h2>Butter Chicken</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6v12LQQF95t5A0feWirVFjbs0VN0onTi7Dg&usqp=CAU" alt="Butter Chicken">
+        <h3>Ingredients:</h3>
+        <li>
+            <ol>1 lb boneless chicken, cut into cubes</ol>
+            <ol>1 cup plain yogurt</ol>
+            <ol>1 tablespoon ginger-garlic paste</ol>
+            <ol>1 teaspoon garam masala</ol>
+            <ol>1 teaspoon chili powder</ol>
+            <ol>1/4 cup butter</ol>
+            <ol>1/4 cup tomato puree</ol>
+            <ol>1/2 cup heavy cream</ol>
+            <ol>Salt to taste</ol>
+            <ol>Fresh cilantro for garnish</ol>
+        </li>
+        <h3>Instructions:</h3>
+        <li>
+            <ol>In a bowl, mix yogurt, ginger-garlic paste, garam masala, chili powder, and salt.</ol>
+            <ol>Add chicken cubes to the marinade, cover, and refrigerate for 1-2 hours.</ol>
+            <ol>In a skillet, melt butter and add marinated chicken. Cook until chicken is cooked through.</ol>
+            <ol>Add tomato puree and simmer for 10 minutes.</ol>
+            <ol>Stir in heavy cream and cook for an additional 5 minutes.</ol>
+            <ol>Garnish with fresh cilantro. Serve your Butter Chicken with rice or naan.</ol>
+        </li>
+    </div>
+
+    <div id="sushi" class="recipe-container">
+        <h2>Sushi</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvyLPLNMb8q1X4RPAvLYEho9NYi8m5rOiqbA&usqp=CAU" alt="Sushi">
+        <h3>Ingredients:</h3>
+        <li>
+            <ol>2 cups sushi rice</ol>
+            <ol>1/2 cup rice vinegar</ol>
+            <ol>Nori (seaweed) sheets</ol>
+            <ol>Sushi-grade fish (e.g., tuna, salmon)</ol>
+            <ol>Cucumber, avocado, and other fillings</ol>
+            <ol>Soy sauce, pickled ginger, and wasabi for serving</ol>
+        </li>
+        <h3>Instructions:</h3>
+        <li>
+            <ol>Cook sushi rice and season it with rice vinegar. Let it cool.</ol>
+            <ol>Place a bamboo sushi rolling mat on a clean surface. Lay a sheet of plastic wrap on top of the mat.</ol>
+            <ol>Place a sheet of nori on the plastic wrap. Wet your hands and spread a thin layer of sushi rice on the nori, leaving a small border at the top.</ol>
+            <ol>Add your choice of fillings (fish, cucumber, avocado, etc.) in the center.</ol>
+            <ol>Roll the sushi tightly using the bamboo mat, applying gentle pressure.</ol>
+            <ol>Use a sharp knife to slice the sushi roll into bite-sized pieces.</ol>
+            <ol>Serve with soy sauce, pickled ginger, and wasabi. Enjoy your Sushi!</ol>
+        </li>
+    </div>
+
+    <div id="creme-brulee" class="recipe-container">
+        <h2>Creme Brulee</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRngowyOsLhmoHHXzfsG9sizkbHwKmj6gQphw&usqp=CAU" alt="Creme Brulee">
+        <h3>Ingredients:</h3>
+        <li>
+            <ol>1 cup heavy cream</ol>
+            <ol>4 large egg yolks</ol>
+            <ol>1/4 cup granulated sugar</ol>
+            <ol>1 teaspoon vanilla extract</ol>
+            <ol>2 tablespoons brown sugar (for caramelizing)</ol>
+        </li>
+        <h3>Instructions:</h3>
+        <li>
+            <ol>Preheat your oven to 325°F (160°C).</ol>
+            <ol>In a saucepan, heat the heavy cream until it's warm but not boiling. Remove from heat.</ol>
+            <ol>In a separate bowl, whisk together the egg yolks, granulated sugar, and vanilla extract.</ol>
+            <ol>Slowly pour the warm cream into the egg mixture, whisking constantly.</ol>
+            <ol>Strain the mixture to remove any lumps, then pour it into ramekins.</ol>
+            <ol>Place the ramekins in a baking dish and add hot water to the dish to create a water bath.</ol>
+            <ol>Bake for about 35-40 minutes until the custard is set but still slightly jiggly in the center.</ol>
+            <ol>Chill the creme brulee in the refrigerator for at least 2 hours.</ol>
+            <ol>Sprinkle brown sugar on top and caramelize it using a kitchen torch or broiler.</ol>
+            <ol>Your Creme Brulee is ready to serve. Enjoy!</li>
+        </li>
+    </div>
+    <script>
+        function showRecipe(recipeName) {
+            // Hide all recipe containers
+            const recipeContainers = document.querySelectorAll('.recipe-container');
+            recipeContainers.forEach(container => {
+                container.style.display = 'none';
+            });
+
+            // Show the selected recipe container
+            document.getElementById(recipeName).style.display = 'block';
+        }
+   
+    </script>
+</body>
+</html>
