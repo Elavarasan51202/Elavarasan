@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Basic CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    #submitBtn {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    #errorText {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>VIT Event Registration</h2>
+    <form id="registrationForm">
+      <input type="text" id="fullName" placeholder="Full Name" required>
+      <input type="text" id="email" placeholder="VIT Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="text" id="zipCode" placeholder="Zip Code" required>
+      <input type="text" id="mobileNumber" placeholder="Mobile Number" required>
+      <p id="errorText"></p>
+      <button type="button" id="submitBtn" onclick="validateForm()">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      // Reset error message
+      document.getElementById("errorText").textContent = "";
+
+      // Get form values
+      const fullName = document.getElementById("fullName").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const zipCode = document.getElementById("zipCode").value;
+      const mobileNumber = document.getElementById("mobileNumber").value;
+
+      // Regular expressions for validation
+      const zipCodePattern = /^\d{5}$/;
+      const emailPattern = /^[\w\.-]+@vitstudent\.ac\.in$/;
+      const passwordPattern = /^(?=.{10,100})(?=(.*[A-Z]){1,})(?=(.*[a-z]){1,})(?=(.*\d){1,})(?=(.*[\~\!\@\#\$\%\^\*\-\_\=\+\[\{\]\}\/\;\:\,\.\?]){3,})[^ ]+$/;
+      const mobileNumberPattern = /^\d{10}$/;
+
+      // Validation checks
+      if (!fullName || !email || !password || !zipCode || !mobileNumber) {
+        document.getElementById("errorText").textContent = "All fields are mandatory.";
+      } else if (!zipCodePattern.test(zipCode)) {
+        document.getElementById("errorText").textContent = "Zip code should be exactly five digits.";
+      } else if (!emailPattern.test(email)) {
+        document.getElementById("errorText").textContent = "Please enter a valid VIT email.";
+      } else if (!passwordPattern.test(password)) {
+        document.getElementById("errorText").textContent = "Invalid password format.";
+      } else if (!mobileNumberPattern.test(mobileNumber)) {
+        document.getElementById("errorText").textContent = "Mobile number should be 10 digits only.";
+      } else {
+        // If all conditions pass, the form is valid
+        document.getElementById("errorText").textContent = "Form submitted successfully!";
+      }
+    }
+  </script>
+</body>
+</html>
